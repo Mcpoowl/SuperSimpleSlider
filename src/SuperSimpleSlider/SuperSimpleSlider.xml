@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="SuperSimpleSlider.widget.SuperSimpleSlider" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>SuperSimpleSlider</name>
+    <description>A SuperSimpleSlider image carousel widget</description>
+
+    <icon />
+
+    <properties>
+        <property key="entity" type="entity">
+          <caption>Entity</caption>
+          <category>Data source</category>
+          <description>The entity which should be displayed in the SuperSimpleSlider</description>
+        </property>
+        <property key="entityConstraint" type="entityConstraint" entityProperty="entity" required="false">
+                <caption>Constraint</caption>
+                <category>Data source</category>
+                <description>Constraint on the carousel entity.</description>
+        </property>     
+        <property key="captionattr" type="attribute" entityProperty="entity">
+          <caption>Caption attribute</caption>
+          <category>Data source</category>
+          <description>This fields provides the caption of a carousel item</description> 
+          <attributeTypes>
+            <attributeType name="String"/> 
+          </attributeTypes>
+        </property>
+        <property key="imageattr" type="attribute" entityProperty="entity" required="true">
+          <caption>Image URL attribute</caption>
+          <category>Data source</category>
+          <description>This field provides the url of the image to be used.</description>
+          <attributeTypes>
+                    <attributeType name="AutoNumber"/>
+                    <attributeType name="Boolean"/>
+                    <attributeType name="Currency"/>
+                    <attributeType name="DateTime"/>
+                    <attributeType name="Enum"/>
+                    <attributeType name="Float"/>
+                    <attributeType name="Integer"/>
+                    <attributeType name="Long"/>
+                    <attributeType name="String"/> 
+          </attributeTypes>         
+        </property>
+        <property key ="sliderType" type="attribute" entityProperty="entity"  required="true">
+            <caption>File type</caption>
+            <category>Data Source</category>
+            <description>This field determines what type of file it is: Video, Audio, or Image. Recommended is an enumeration with those values, but a String will work aswell
+            </description>
+            <attributeTypes>
+                <attributeType name="String" />
+                <attributeType name="Enum" />
+            </attributeTypes>
+        </property>
+        <property key="sortattr" type="attribute" entityProperty="entity">
+          <caption>Sort attribute</caption>
+          <category>Data source</category>
+          <description>This field is used to sort the images in the carousel, using ascending order</description>
+          <attributeTypes>
+                    <attributeType name="AutoNumber"/>
+                    <attributeType name="Boolean"/>
+                    <attributeType name="Currency"/>
+                    <attributeType name="DateTime"/>
+                    <attributeType name="Enum"/>
+                    <attributeType name="Float"/>
+                    <attributeType name="Integer"/>
+                    <attributeType name="Long"/>
+                    <attributeType name="String"/> 
+          </attributeTypes> 
+        </property>
+    </properties>
+</widget>
+
